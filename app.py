@@ -29,7 +29,7 @@ MODEL_FILE = "Dog_vs_cat_model.h5"       # nama file di repo HF
 
 cache_dir = os.path.join(os.getcwd(), "models")
 with st.spinner("Downloading model from Hugging Face..."):
-    MODEL_PATH = hf_hub_download(repo_id=REPO_ID, filename=MODEL_FILE, force_download=True, cache_dir = cache_dir)
+    MODEL_PATH = hf_hub_download(repo_id=REPO_ID, filename=MODEL_FILE,cache_dir = cache_dir)
 
 IMG_SIZE = (224, 224)
 PROB_DECIMALS = 3
@@ -98,6 +98,7 @@ if uploaded_file is not None:
         textposition="outside"
     )
     st.plotly_chart(fig, use_container_width=True)
+
 
 
 
