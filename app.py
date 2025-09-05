@@ -34,7 +34,7 @@ with st.spinner("Downloading model from Hugging Face..."):
 IMG_SIZE = (224, 224)
 PROB_DECIMALS = 3
 
-LABEL_MAP = {0: "Cat", 1: "Dog"}
+LABEL_MAP = {1: "Cat", 0: "Dog"}
 CLASS_COLORS = {"Cat": "#636EFA", "Dog": "#EF553B"}
 
 # -----------------------------
@@ -98,6 +98,7 @@ if uploaded_file is not None:
         textposition="outside"
     )
     st.plotly_chart(fig, use_container_width=True)
+
 
 
 
